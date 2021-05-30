@@ -66,7 +66,7 @@ function init() {
 
   const textureLoader = new THREE.TextureLoader(manager);
   const texture = textureLoader.load(
-    "model/textures/MCh_S_12_Rzezba_Popiersie_Rozy_Loewenfeld.jpg"
+    "model/textures/Wood_Lumber_ButtJoined.jpg"
   );
 
   // model
@@ -196,10 +196,17 @@ gui
     // camera.rotation.x = 0; // verticalité
     // camera.rotation.y = -1; // 
     // camera.rotation.z = 0; // 
-
+    
     // finish
     // camera.position.z = -203;
     // camera.rotation.y = -1.8; // 
+    
+    
+    // camera.position.z = -151;
+    // camera.rotation.y = -1; // 
+
+    camera.position.z = -151 - ((203 - 151) * percent /100);
+    camera.rotation.y = -1 - ((1.8 - 1) * percent / 100);
 
   }
 
